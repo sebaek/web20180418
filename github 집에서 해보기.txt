@@ -1,0 +1,20 @@
+1. 다운로드, 설치
+https://git-scm.com/
+
+2. git 최초설정
+git config --global user.name "my name"
+git config --global user.email myemail@email.com
+
+3. 
+git clone https.....
+
+4. 파일 수정
+
+5. 
+git add .
+git commit -m 'new commit message'
+git push -u origin master
+
+
+6. 학원에서..
+git pull
