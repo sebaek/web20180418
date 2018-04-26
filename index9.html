@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+
+<body>
+    <button id="myBtn">동전던지기</button>
+    <br>
+    <img id="myImage" src="image/1.jpg" alt="">
+
+    <script>
+        document.getElementById("myBtn").onclick = coin;
+
+        function coin() {
+            var ran = Math.floor(Math.random() * 2) + 1;
+            var filename = "image/" + ran + ".jpg";
+            document.getElementById("myImage").src = filename;
+        }
+
+    </script>
+</body>
+
+</html>
