@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-offset-4 col-xs-4">
+
+                <button id="mybtn" class="btn btn-primary btn-lg">동전던지기</button>
+                <img id="myImage" class="thumbnail" src="image/1.jpg" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+    document.getElementById("mybtn").addEventListener("click", function() {
+        document.getElementById("myImage").src = 
+            "image/" + (Math.floor(Math.random() * 2) + 1) + ".jpg";
+    });
+    </script>
+</body>
+
+</html>
