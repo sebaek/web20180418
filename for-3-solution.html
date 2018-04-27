@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 24px;
+        }
+        div {
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="button1" onclick="star1();">별 보여줘 1</button>
+    <div id="result1">
+
+    </div>
+
+    <script>
+        function star1() {
+            for (var i = 0; i < 5; i++) {
+                for (var j = 0; j <= i; j++) {
+                    document.getElementById("result1").innerHTML += "*";
+                }
+                document.getElementById("result1").innerHTML += "<br>";
+            }
+        }
+    </script>
+</body>
+
+</html>
