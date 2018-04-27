@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input1" type="number">
+    <input id="input2" type="number">
+    <br>
+    <button onclick="check();">확인</button>
+    <p id="result"></p>
+
+    <hr>
+    <input type="number" id="input3">
+    <input type="number" id="input4">
+    <br>
+    <button onclick="check2();">확인</button>
+    <p id="result2"></p>
+
+<script>
+    function check2() {
+        var num1 = Number(document.getElementById("input3").value);
+        var num2 = Number(document.getElementById("input4").value);
+
+        if (num1 > num2) {
+            document.getElementById("result2").innerHTML = 
+                "왼쪽 값이 더 큽니다.";
+        } else if (num1 < num2) {
+            document.getElementById("result2").innerHTML = 
+                "오른쪽 값이 더 큽니다.";
+        } else {
+            document.getElementById("result2").innerHTML = 
+                "두 값이 같습니다.";
+        }
+    }
+
+
+
+
+
+    function check() {
+        var num1 = Number(document.getElementById("input1").value);
+        var num2 = Number(document.getElementById('input2').value);
+
+        if (num1 === num2) {
+            document.getElementById("result").innerHTML = 
+                "두 값이 같습니다.";
+        } else {
+            document.getElementById("result").innerHTML = 
+                "두 값이 같지 않습니다.";
+        }
+
+    }
+
+</script>
+
+</body>
+</html>
