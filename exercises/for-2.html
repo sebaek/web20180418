@@ -7,17 +7,38 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="show();" id="button1">번호 여섯개!!</button>
-    <p id="result"></p>
+    <button onclick="show1();" id="button1">번호 여섯개!!</button>
+    <button onclick="show2();" id="button1">번호 중복없이 여섯개!!</button>
+    <p id="result1"></p>
 
     <script>
-    function show() {
+    function show2() {
+        var numbers = [];
+        var text = "";
+        for (var i = 0; i < 45; i++) {
+            numbers.push(i+1);
+        }
+        for (var i = 0; i < 6; i++) {
+            text += pickOne(numbers) + "<br>";
+        }
+        document.getElementById("result1").innerHTML = text;
+    }
+
+    function pickOne(array) {
+        var randomIndex = Math.floor(Math.random() * array.length);
+        var returnValue = array[randomIndex];
+        array.splice(randomIndex, 1);
+        return returnValue;
+    }
+
+
+    function show1() {
         var text = "";
         for (i = 0; i < 6; i++) {
             var ran = getRandomNumber();
             text += ran + "<br>";
         }
-        document.getElementById("result").innerHTML = text;
+        document.getElementById("result1").innerHTML = text;
     }
 
     function getRandomNumber() {    
