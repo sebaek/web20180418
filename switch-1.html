@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="input1">
+    <br>
+    <button onclick="check();" id="button1">점수?</button>
+    <p id="result"></p>
+
+    <script>
+        function check() {
+            var grade = document.getElementById("input1").value;
+            grade = grade.toLowerCase();
+            var text;
+
+            switch (grade) {
+                case "a":
+                // case "A":
+                    text = "90점 이상입니다.";
+                    break;
+                case "b":
+                // case "B":
+                    text = "80점 이상입니다.";
+                    break;
+                case "c":
+                    text = "70점 이상입니다.";
+                    break;
+                case "d":
+                    text = "60점 이상입니다.";
+                    break;
+                case "f":
+                    text = "50점 이상입니다.";
+                    break;
+                default:
+                    text = "올바른 값을 넣어주세요.";
+                    break;
+            }
+
+
+            document.getElementById("result").innerHTML = text;
+        }
+
+    </script>
+
+</body>
+
+</html>
