@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <textarea id="input1" rows="20" cols="30"></textarea>
+    <br>
+    <button onclick="check();" "button1">p는 몇 번?</button>
+    <p id="result"></p>
+
+    <script>
+    var text = "Peter Piper picked a peck of pickled peppers.A peck of pickled peppers Peter Piper picked.If Peter Piper picked a peck of pickled peppers,Where's the peck of pickled peppers Peter Piper picked?";
+    document.getElementById("input1").value = text;
+    function check() {
+        var count = 0;
+        for (var i = 0; i < text.length; i++) {
+            if (text.charAt(i).toLowerCase() === "p") {
+                count++;
+            }
+        }
+        document.getElementById("result").innerHTML = 
+            count + "번 나옵니다.";
+    }
+
+    </script>
+</body>
+</html>
