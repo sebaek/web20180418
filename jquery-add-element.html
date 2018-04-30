@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Document</title>
+
+    <script>
+    $(document).ready(function() {
+        $("#button1").click(function() {
+            var text = $("#input1").val();
+            $("#ul1").append("<li>" + text + "</li>");
+        });
+    });
+    
+    </script>
+</head>
+<body>
+    <input id="input1" type="text">
+    <button id="button1">목록에 추가하기</button>
+    <ul id="ul1"></ul>
+</body>
+</html>
