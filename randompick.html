@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
+    <style>
+        .container {
+            margin-top: 70px;
+        }
+
+        body {
+            font-size: 16px;
+            line-height: 2;
+        }
+    </style>
+
+    <script>
+        $(function () {
+            var myIntervalFunction = function(b) {
+                    var randomNumber = Math.floor(Math.random() * 32) + 1;
+                    // console.log(randomNumber);
+                    var $panel = $("#panel" + randomNumber).removeClass("panel-default").addClass("panel-primary");
+
+                    if (b) {
+                        setTimeout(function() {
+                            // $panelI = $panel;
+                            $panel.removeClass("panel-primary").addClass("panel-default");
+                        }, 10);
+                    }
+            }
+            var $buttonGo = $("#button-go");
+            var $buttonStop = $("#button-stop").addClass("disabled").attr("disabled", "");
+            var intervalFunction = null;
+            $buttonGo.on("click", function () {
+                $(".panel").removeClass("panel-primary").addClass("panel-default");
+                $buttonGo.addClass("disabled").attr("disabled", "");
+                $buttonStop.removeClass("disabled").removeAttr("disabled");
+                intervalFunction = setInterval(function() {myIntervalFunction(true);}, 15);
+            });
+
+            $buttonStop.on("click", function () {
+                $buttonStop.addClass("disabled").attr("disabled", "");
+                $buttonGo.removeClass("disabled").removeAttr("disabled");
+                clearInterval(intervalFunction);
+                setTimeout(function() {myIntervalFunction(false);}, 10);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container" id="mycontainer">
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel1">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel2">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel3">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel4">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel5">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel6">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel7">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel8">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel9">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel10">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel11">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel12">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel13">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel14">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel15">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel16">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel17">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel18">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel19">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel20">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel21">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel22">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel23">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel24">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel25">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel26">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel27">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel28">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel29">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel30">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel31">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="panel panel-default" id="panel32">
+                        <div class="panel-heading text-center">유재석</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="button-container">
+        <div class="row">
+            <div class="col-xs-offset-4 col-xs-4">
+                <div class="btn-group btn-group-justified">
+                    <div class="btn-group">
+                        <button type="button" id="button-go" class="btn btn-danger">GO</button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" id="button-stop" class="btn btn-primary">STOP</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
